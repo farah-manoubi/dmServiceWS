@@ -2,7 +2,7 @@ package com.webservice.model;
 
 public class Country {
 	private String name;
-	private String id;
+	private int code;
 	
 	
 	public String getName() {
@@ -11,10 +11,10 @@ public class Country {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getId() {
-		return id;
+	public int getCode() {
+		return code;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setCode(int code) {
+		this.code = code;
 	}
 }
