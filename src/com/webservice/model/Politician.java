@@ -5,6 +5,10 @@ public class Politician {
 	private int age;
 	private int popularity;
 	
+	public Politician(String name) {
+		this.name = name;
+	}
+	
 	
 	public String getName() {
 		return name;

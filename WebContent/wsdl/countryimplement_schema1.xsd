@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://service.webservice.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://service.webservice.com/" version="1.0">
+<xs:element name="addCountry" type="tns:addCountry"/>
+<xs:element name="addCountryResponse" type="tns:addCountryResponse"/>
+<xs:element name="getAllPoliticians" type="tns:getAllPoliticians"/>
+<xs:element name="getAllPoliticiansResponse" type="tns:getAllPoliticiansResponse"/>
+<xs:element name="getCountry" type="tns:getCountry"/>
+<xs:element name="getCountryResponse" type="tns:getCountryResponse"/>
+<xs:complexType name="getCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="country" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getCountryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="country" type="tns:country"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="country">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="politician" nillable="true" type="tns:politician"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="politician">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element name="popularity" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllPoliticians">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:country"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllPoliticiansResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="politician" type="tns:politician"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="country" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addCountryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="country" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
