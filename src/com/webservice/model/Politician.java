@@ -4,9 +4,13 @@ public class Politician {
 	private String name;
 	private int age;
 	private int popularity;
+	private String location;
 	
-	public Politician(String name) {
+	public Politician(String name, int age, int popularity, String location) {
 		this.name = name;
+		this.age = age;
+		this.popularity = popularity;
+		this.location = location;
 	}
 	
 	
@@ -27,5 +31,11 @@ public class Politician {
 	}
 	public void setPopularity(int popularity) {
 		this.popularity = popularity;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
 	}
 }

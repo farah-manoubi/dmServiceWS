@@ -1,6 +1,7 @@
 package com.webservice.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.jws.*;
@@ -14,11 +15,11 @@ public interface CountryInterface {
 	@WebResult(name="country")
 	public String addCountry(@WebParam(name="country")String country);
 	
-	@WebMethod(operationName="getCountry", action="urn:GetCountry")
+	/*@WebMethod(operationName="getCountry", action="urn:GetCountry")
 	@WebResult(name="country")
-	public Country getCountry(@WebParam(name="country")String name);
+	public Country getCountry(@WebParam(name="country")String name);*/
 	
-	@WebMethod(operationName="getAllPoliticians", action="urn:GetAllPoliticians")
+	@WebMethod(operationName="addPolitician", action="urn:AddPolitician")
 	@WebResult(name="politician")
-	public ArrayList<Politician> getAllPoliticians(Country country);
+	public int addPolitican(Politician politician);
 }

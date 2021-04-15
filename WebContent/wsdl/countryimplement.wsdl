@@ -5,76 +5,53 @@
   <import namespace="http://service.webservice.com/" schemaLocation="countryimplement_schema1.xsd"/>
 </schema>
   </wsdl:types>
-  <wsdl:message name="getCountry">
-    <wsdl:part name="parameters" element="tns:getCountry">
-    </wsdl:part>
-  </wsdl:message>
-  <wsdl:message name="getAllPoliticians">
-    <wsdl:part name="parameters" element="tns:getAllPoliticians">
-    </wsdl:part>
-  </wsdl:message>
-  <wsdl:message name="getAllPoliticiansResponse">
-    <wsdl:part name="parameters" element="tns:getAllPoliticiansResponse">
-    </wsdl:part>
-  </wsdl:message>
   <wsdl:message name="addCountry">
     <wsdl:part name="parameters" element="tns:addCountry">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addPolitician">
+    <wsdl:part name="parameters" element="tns:addPolitician">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="addCountryResponse">
     <wsdl:part name="parameters" element="tns:addCountryResponse">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="getCountryResponse">
-    <wsdl:part name="parameters" element="tns:getCountryResponse">
+  <wsdl:message name="addPoliticianResponse">
+    <wsdl:part name="parameters" element="tns:addPoliticianResponse">
     </wsdl:part>
   </wsdl:message>
   <wsdl:portType name="CountryInterface">
-    <wsdl:operation name="getCountry">
-      <wsdl:input name="getCountry" message="tns:getCountry">
-    </wsdl:input>
-      <wsdl:output name="getCountryResponse" message="tns:getCountryResponse">
-    </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getAllPoliticians">
-      <wsdl:input name="getAllPoliticians" message="tns:getAllPoliticians">
-    </wsdl:input>
-      <wsdl:output name="getAllPoliticiansResponse" message="tns:getAllPoliticiansResponse">
-    </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="addCountry">
       <wsdl:input name="addCountry" message="tns:addCountry">
     </wsdl:input>
       <wsdl:output name="addCountryResponse" message="tns:addCountryResponse">
     </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="addPolitician">
+      <wsdl:input name="addPolitician" message="tns:addPolitician">
+    </wsdl:input>
+      <wsdl:output name="addPoliticianResponse" message="tns:addPoliticianResponse">
+    </wsdl:output>
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="CountryImplementServiceSoapBinding" type="tns:CountryInterface">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="getCountry">
-      <soap:operation soapAction="urn:GetCountry" style="document"/>
-      <wsdl:input name="getCountry">
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output name="getCountryResponse">
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getAllPoliticians">
-      <soap:operation soapAction="urn:GetAllPoliticians" style="document"/>
-      <wsdl:input name="getAllPoliticians">
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output name="getAllPoliticiansResponse">
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="addCountry">
       <soap:operation soapAction="urn:AddCountry" style="document"/>
       <wsdl:input name="addCountry">
         <soap:body use="literal"/>
       </wsdl:input>
       <wsdl:output name="addCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPolitician">
+      <soap:operation soapAction="urn:AddPolitician" style="document"/>
+      <wsdl:input name="addPolitician">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addPoliticianResponse">
         <soap:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
