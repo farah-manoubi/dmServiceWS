@@ -32,7 +32,7 @@ public class CountryImplement implements CountryInterface {
 	}
 	
 	
-	////
+	//
 	public int addPolitican(Politician politician) {
 		boolean exist = false;
 		ArrayList<Politician> al;

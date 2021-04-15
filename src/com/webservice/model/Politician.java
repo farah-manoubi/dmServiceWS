@@ -12,7 +12,7 @@ public class Politician {
 		this.popularity = popularity;
 		this.location = location;
 	}
-	////
+	//
 	
 	
 	public String getName() {

@@ -23,4 +23,4 @@ public interface CountryInterface {
 	@WebResult(name="politician")
 	public int addPolitican(Politician politician);
 }
-////
+//
