@@ -13,20 +13,20 @@ import javax.xml.bind.annotation.XmlType;
  * Generated source version: 2.7.18
  */
 
-@XmlRootElement(name = "addPoliticianResponse", namespace = "http://service.webservice.com/")
+@XmlRootElement(name = "getPoliticianByCountryResponse", namespace = "http://service.webservice.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "addPoliticianResponse", namespace = "http://service.webservice.com/")
+@XmlType(name = "getPoliticianByCountryResponse", namespace = "http://service.webservice.com/")
 
-public class AddPoliticianResponse {
+public class GetPoliticianByCountryResponse {
 
     @XmlElement(name = "politician")
-    private int politician;
+    private java.lang.String politician;
 
-    public int getPolitician() {
+    public java.lang.String getPolitician() {
         return this.politician;
     }
 
-    public void setPolitician(int newPolitician)  {
+    public void setPolitician(java.lang.String newPolitician)  {
         this.politician = newPolitician;
     }
 

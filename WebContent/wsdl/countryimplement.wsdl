@@ -21,7 +21,21 @@
     <wsdl:part name="parameters" element="tns:addPoliticianResponse">
     </wsdl:part>
   </wsdl:message>
+  <wsdl:message name="getPoliticianByCountry">
+    <wsdl:part name="parameters" element="tns:getPoliticianByCountry">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPoliticianByCountryResponse">
+    <wsdl:part name="parameters" element="tns:getPoliticianByCountryResponse">
+    </wsdl:part>
+  </wsdl:message>
   <wsdl:portType name="CountryInterface">
+    <wsdl:operation name="getPoliticianByCountry">
+      <wsdl:input name="getPoliticianByCountry" message="tns:getPoliticianByCountry">
+    </wsdl:input>
+      <wsdl:output name="getPoliticianByCountryResponse" message="tns:getPoliticianByCountryResponse">
+    </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="addCountry">
       <wsdl:input name="addCountry" message="tns:addCountry">
     </wsdl:input>
@@ -37,6 +51,15 @@
   </wsdl:portType>
   <wsdl:binding name="CountryImplementServiceSoapBinding" type="tns:CountryInterface">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getPoliticianByCountry">
+      <soap:operation soapAction="urn:GetPoliticianByCountry" style="document"/>
+      <wsdl:input name="getPoliticianByCountry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPoliticianByCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="addCountry">
       <soap:operation soapAction="urn:AddCountry" style="document"/>
       <wsdl:input name="addCountry">

@@ -13,21 +13,21 @@ import javax.xml.bind.annotation.XmlType;
  * Generated source version: 2.7.18
  */
 
-@XmlRootElement(name = "addCountryResponse", namespace = "http://service.webservice.com/")
+@XmlRootElement(name = "getPoliticianByCountry", namespace = "http://service.webservice.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "addCountryResponse", namespace = "http://service.webservice.com/")
+@XmlType(name = "getPoliticianByCountry", namespace = "http://service.webservice.com/")
 
-public class AddCountryResponse {
+public class GetPoliticianByCountry {
 
-    @XmlElement(name = "country")
-    private java.lang.String country;
+    @XmlElement(name = "arg0")
+    private java.lang.String arg0;
 
-    public java.lang.String getCountry() {
-        return this.country;
+    public java.lang.String getArg0() {
+        return this.arg0;
     }
 
-    public void setCountry(java.lang.String newCountry)  {
-        this.country = newCountry;
+    public void setArg0(java.lang.String newArg0)  {
+        this.arg0 = newArg0;
     }
 
 }

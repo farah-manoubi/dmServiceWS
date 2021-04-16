@@ -8,6 +8,14 @@ import javax.jws.*;
 import com.webservice.model.Country;
 import com.webservice.model.Politician;
 
+/**
+ * Interface qui appelle les méthodes de la classe CountryImplement.
+ * @file CountryInterface.java
+ * @author MANOUBI Farah, DENDOUNE Rayane
+ * @version 1.0
+ * @date 16/04/2021
+ *
+ */
 @WebService(name="CountryInterface", targetNamespace ="http://service.webservice.com/")
 public interface CountryInterface {
 	
@@ -15,12 +23,12 @@ public interface CountryInterface {
 	@WebResult(name="country")
 	public String addCountry(@WebParam(name="country")String country);
 	
-	/*@WebMethod(operationName="getCountry", action="urn:GetCountry")
-	@WebResult(name="country")
-	public Country getCountry(@WebParam(name="country")String name);*/
-	
 	@WebMethod(operationName="addPolitician", action="urn:AddPolitician")
 	@WebResult(name="politician")
-	public int addPolitican(Politician politician);
+	public int addPolitician(String name, int age, int popularity, String location);
+
+	@WebMethod(operationName="getPoliticianByCountry", action="urn:GetPoliticianByCountry")
+	@WebResult(name="politician")
+	public String getPoliticianByCountry(String country);
 }
 //

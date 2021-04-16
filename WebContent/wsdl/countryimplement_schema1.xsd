@@ -3,6 +3,18 @@
 <xs:element name="addCountryResponse" type="tns:addCountryResponse"/>
 <xs:element name="addPolitician" type="tns:addPolitician"/>
 <xs:element name="addPoliticianResponse" type="tns:addPoliticianResponse"/>
+<xs:element name="getPoliticianByCountry" type="tns:getPoliticianByCountry"/>
+<xs:element name="getPoliticianByCountryResponse" type="tns:getPoliticianByCountryResponse"/>
+<xs:complexType name="getPoliticianByCountry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPoliticianByCountryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="politician" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
 <xs:complexType name="addCountry">
     <xs:sequence>
       <xs:element minOccurs="0" name="country" type="xs:string"/>
@@ -15,15 +27,10 @@
   </xs:complexType>
 <xs:complexType name="addPolitician">
     <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="tns:politician"/>
-    </xs:sequence>
-  </xs:complexType>
-<xs:complexType name="politician">
-    <xs:sequence>
-      <xs:element name="age" type="xs:int"/>
-      <xs:element minOccurs="0" name="location" type="xs:string"/>
-      <xs:element minOccurs="0" name="name" type="xs:string"/>
-      <xs:element name="popularity" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element name="arg1" type="xs:int"/>
+      <xs:element name="arg2" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
 <xs:complexType name="addPoliticianResponse">
