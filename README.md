@@ -21,6 +21,7 @@ Dans le deuxieme package "com.webservice.service ", ce dernier comporte l'interf
 * addCountry
 * addPolitician
 * getPoliticianByCountry
+
 La méthode "addCountry" permet à un client d'ajouter un pays à notre web service.
 La méthode "addPolitician" permet à un client d'ajouter un politicien en précisant son nom, son âge, sa popularité et son pays.
 La méthode "getPoliticianByCountry" permet de récupérer une liste de politiciens en fonction du pays choisit par le client.
@@ -32,13 +33,16 @@ Pour pouvoir créer notre service web, nous avons ajouté des annotations "jax-w
 
 
 ### 2) Service RS
+Par la suite, nous avons mis en place un second service. Ce service web est de type RS (RestFul), il utilise CXF. Nous avons avons créer différents packages pour distingués les données, les ressources ainsi que les service. Ces packages sont au nombre de 3 :
+* com.web.data
+* com.web.resource
+* com.web.service
 
-<h2 align="center"> Description des clients </h2>
+Le premier package comporte les différentes classes de données qui sont : "Country" et "Politician". 
+Dans le second package com.web.resource, nous avons réaliser des méthodes qui vont permettrent de gérer les services de notre application. Celles-ci contiennent des méthodes HTTP : par exemple POST qui va permettre de créer un politicien ou un pays. Une méthode GET est aussi utilisée. Elle va permettre de récuperer le nom des différents politiciens en fonction d'un pays. Nous avons également indiqué les différents chemins à l'aide de l'annotation "@Path". Ce qui va nous permettre de pouvoir réaliser les différentes requêtes HTTP. Ces méthodes retournent chacunes différentes réponses HTTP :
+* CREATED pour la méthode POST
+* OK pour la méthode GET
 
-### 1) Client WS
-### 2) Clien RS
+Le package com.web.service, lui, contient les différentes méthodes de notre service identiques à celle citées précedement, elles permettent la même chose à savoir :  ajouter un nouveau pays, ajouté un politicien et pouvoir obtenir différents politiciens d'un pays en indiquant ce pays. 
 
-<h2 align="center"> Démonstration d'une fonctionnalité de notre implémentation </h2>
 
-### 1) Client WS
-### 2) Client RS
