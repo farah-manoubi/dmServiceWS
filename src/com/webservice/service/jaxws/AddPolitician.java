@@ -30,7 +30,7 @@ public class AddPolitician {
 
     public java.lang.String getArg0() {
         return this.arg0;
-    }
+    }   
 
     public void setArg0(java.lang.String newArg0)  {
         this.arg0 = newArg0;

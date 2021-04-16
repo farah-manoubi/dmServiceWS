@@ -29,6 +29,6 @@ public class AddPoliticianResponse {
     public void setPolitician(int newPolitician)  {
         this.politician = newPolitician;
     }
-
+  
 }
 

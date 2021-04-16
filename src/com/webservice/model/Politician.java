@@ -91,7 +91,7 @@ public class Politician {
 	public String getLocation() {
 		return location;
 	}
-	
+	   
 	/**
 	 * Fonction qui modifie le pays du politicien.
 	 * String setLocation()

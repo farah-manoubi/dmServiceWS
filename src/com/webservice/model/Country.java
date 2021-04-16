@@ -28,7 +28,7 @@ public class Country {
 	public String getName() {
 		return name;
 	}
-	
+	   
 	/**
 	 * Fonction qui modifie le nom.
 	 * void setName()

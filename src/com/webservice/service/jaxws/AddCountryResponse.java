@@ -29,6 +29,6 @@ public class AddCountryResponse {
     public void setCountry(java.lang.String newCountry)  {
         this.country = newCountry;
     }
-
+   
 }
 

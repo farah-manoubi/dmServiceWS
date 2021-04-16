@@ -84,7 +84,7 @@ public class CountryImplement implements CountryInterface {
 		return 0;
 		
 	}
-	
+	   
 	/**
 	 * Fonction qui permet d'obtenir le nom des N politiciens d'un pays en fonction du pays passé en paramètre.
 	 * String getPoliticianByCountry(String country)

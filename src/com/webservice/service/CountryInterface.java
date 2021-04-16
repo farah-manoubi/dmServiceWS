@@ -14,7 +14,7 @@ import com.webservice.model.Politician;
  * @author MANOUBI Farah, DENDOUNE Rayane
  * @version 1.0
  * @date 16/04/2021
- *
+ *  
  */
 @WebService(name="CountryInterface", targetNamespace ="http://service.webservice.com/")
 public interface CountryInterface {

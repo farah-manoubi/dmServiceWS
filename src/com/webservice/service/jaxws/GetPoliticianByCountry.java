@@ -30,5 +30,5 @@ public class GetPoliticianByCountry {
         this.arg0 = newArg0;
     }
 
-}
+}   
 
